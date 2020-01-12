@@ -16,3 +16,9 @@ export {drop,dropRight} from './array/drop';
 export {map,reduce,filter,find,findIndex,every,some} from './array/base';
 
 export {mergeObject} from './object/mergeObject';
+export {newInstance} from './object/newInstance';
+export {myInstanceOf} from './object/myInstanceOf';
+export {clone} from './object/clone';
+
+
+export {reverseString,palindrome,truncate} from './string/base';
