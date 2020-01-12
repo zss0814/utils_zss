@@ -1,0 +1,15 @@
+{
+  "name": "utils_zss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "build": "webpack --watch"
+  },
+  "dependencies": {
+    "webpack": "^4.41.5"
+  }
+}
