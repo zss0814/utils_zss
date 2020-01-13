@@ -12,7 +12,7 @@
     "promise",
     "axios"
   ],
-  "repository":"",
+  "repository":"https://github.com/zss0814/utils_zss.git",
   "author":"zss0814 <1750592414@qq.com>",
   "scripts": {
     "build": "webpack --watch"
