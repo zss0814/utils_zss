@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>队列_应用</title>
+</head>
+<body>
+  <script type="text/javascript" src="../../../dist/utils_zss.js"></script>
+  <script>
+    /* 
+    利用自定义队列实现击鼓传花游戏函数
+    */
+   
+
+    // function passGame(names,num) {
+    //   while(names.length>1){
+    //     for (let index = 0; index < num-1; index++) {
+    //       console.log(names);
+    //       names.push(names[0])
+    //       names.splice(0,1);
+    //     }
+    //     names.splice(0,1);
+    //     console.log(names);
+    //   }
+
+    //   return names;//得到了对应的值，如果想拿到下标还得用indexOf（前提是事先将数组保存起来才可以找到下标）
+    // }
+
+
+    //将数组的下标存起来
+    function passGame(names,num) {
+      console.log('1111');
+      let queue = new utils.Queue();
+      for (let index = 0; index < names.length; index++) {
+        const name = names[index];
+        //用对象存，然后再将每一个对象存到数组中(此时就相当于存入队列中)
+        queue.enQueue({index,name});  
+      }
+      //console.log(queue.front(),'----');
+      while(queue.size()>1){
+        for (let i = 0; i < num-1; i++) {
+          queue.enQueue(queue.deQueue());
+        }
+        queue.deQueue();
+      }
+      
+      
+      return queue.front();
+    }
+
+    
+    var names = ['A','B','C','D','E']
+    
+    console.log(passGame(names,4));
+  </script>
+</body>
+</html>

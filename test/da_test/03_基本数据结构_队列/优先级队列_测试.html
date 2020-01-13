@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优先级队列_测试</title>
+</head>
+<body>
+  <script src="../../../dist/utils_zss.js"></script>
+  <script>
+    // 创建优先级队列对象
+    var pQueue = new utils.PriorityQueue()
+
+    // 添加元素
+    pQueue.enQueue("abc", 10)
+    pQueue.enQueue("cba", 5)
+    pQueue.enQueue("nba", 12)
+    pQueue.enQueue("mba", 3)
+
+    // 遍历所有的元素
+    var size = pQueue.size()
+    console.log(size);
+    for (var i = 0; i < size; i++) {
+        var item = pQueue.deQueue()
+        console.log(item.value, item.priority)
+    }
+  </script>
+</body>
+</html>

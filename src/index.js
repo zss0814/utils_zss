@@ -22,3 +22,8 @@ export {clone} from './object/clone';
 
 
 export {reverseString,palindrome,truncate} from './string/base';
+
+export {default as Stack} from './da/stack';
+export {Queue,PriorityQueue} from './da/queue';
+
+export {bubbleSort,selectSort,insertSort} from './da/sort'
