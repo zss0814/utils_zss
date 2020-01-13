@@ -19,6 +19,7 @@ export {mergeObject} from './object/mergeObject';
 export {newInstance} from './object/newInstance';
 export {myInstanceOf} from './object/myInstanceOf';
 export {clone} from './object/clone';
+export {deepClone} from './object/deepClone';
 
 
 export {reverseString,palindrome,truncate} from './string/base';

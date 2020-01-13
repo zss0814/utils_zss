@@ -10,7 +10,9 @@
     "object",
     "function",
     "promise",
-    "axios"
+    "axios",
+    "数据结构与算法",
+    "队列"
   ],
   "repository":"https://github.com/zss0814/utils_zss.git",
   "author":"zss0814 <1750592414@qq.com>",
