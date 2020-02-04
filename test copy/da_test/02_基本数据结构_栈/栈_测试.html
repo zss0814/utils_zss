@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>栈_测试</title>
+</head>
+<body>
+  <script src="../../../dist/utils_zss.js"></script>
+  <script>
+    const stack = new utils.Stack()
+    
+    stack.push(6)
+    stack.push(5)
+    stack.pop()   
+    stack.push(4)
+    console.log(stack.isEmpty(),stack.size(),stack.peek())
+    
+    const stack2 = new utils.Stack()
+    stack2.push('a')
+    stack2.push('b')
+    stack2.pop()
+    console.log(stack2.peek(), stack2.size(), stack2.isEmpty())
+  </script>
+</body>
+</html>
