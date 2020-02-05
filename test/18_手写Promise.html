@@ -7,19 +7,51 @@
   <title>手写Promise</title>
 </head>
 <body>
-
-<script src="../dist/atguigu-utils.js"></script>
+<!-- <script type="text/javascript">
+  new Promise((resolve,reject) => {
+    setTimeout(() => {
+      throw 2;
+    }, 1000);
+  }).then(
+    value => {
+      console.log('成功了',value);
+    },
+    reason => {
+      console.log('失败了',reason);
+    }
+  )
+</script> -->
+<script src="../dist/utils_zss.js"></script>
 <script>
-  const { Promise } = aUtils
+
+  const { Promise } = utils;
+  const p1 = Promise.resolve(5)
+  const p2 = Promise.resolve(Promise.reject(6));
+  p1.then(value => console.log('p1', value))
+  p2.catch(reason => console.log('p2', reason))
+  Promise.race([p1,p2]).then(value => console.log(value));
+  Promise.all([p1,p2]).then(value => console.log(value),reason => console.log(reason))
+
+
   new Promise((resolve, reject) => {
-    // resolve(1)
-    // setTimeout(() => {
+    //不能在异步任务中抛出错误
+    //throw 2;
+    //resolve(1)
+    setTimeout(() => {
       reject(2)
-    // }, 1000);
+      //resolve(1) 
+    }, 1000);
   })
-  .then(value => {
-    console.log('onResolve()1')
-  })
+  .then(
+    value => {
+      console.log('onResolve()',value);
+      
+    },
+    reason => {
+      console.log('onReject()',reason);
+      throw 123;
+    }
+  )
   .then(
     value => {console.log('onResolved()2', value)},
     reason => {
@@ -33,7 +65,7 @@
     value => {console.log('onResolved3()', value)},
     reason => {
       console.log('onRejected3()', reason)
-      // throw reason
+      throw reason
     }
   ).catch(reason => {
     console.log('onRejected4()', reason)

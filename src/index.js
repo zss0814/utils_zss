@@ -27,4 +27,5 @@ export {reverseString,palindrome,truncate} from './string/base';
 export {default as Stack} from './da/stack';
 export {Queue,PriorityQueue} from './da/queue';
 
-export {bubbleSort,selectSort,insertSort} from './da/sort'
+export {bubbleSort,selectSort,insertSort} from './da/sort';
+export {Promise} from './promise/index';
