@@ -29,3 +29,4 @@ export {Queue,PriorityQueue} from './da/queue';
 
 export {bubbleSort,selectSort,insertSort} from './da/sort';
 export {Promise} from './promise/index';
+export {default as PubSub} from './pubsub/index';
