@@ -20,10 +20,10 @@
     "build": "webpack --watch"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^5.0.1"
   },
   
   "dependencies": {
-    "webpack": "^4.41.5"
+    "webpack": "^5.75.0"
   }
 }
